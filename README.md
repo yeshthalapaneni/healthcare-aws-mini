@@ -19,12 +19,12 @@ This repo is the result: a thin but realistic slice that touches storage, catalo
 ## What I did (high level)
 
 1. **Data landing in S3**
-   - Uploaded curated Parquet datasets to `s3://<bucket>/processed/` with four folders:
+   - Uploaded curated Parquet datasets to `s3://<yesh-healthcare1>/processed/` with four folders:
      - `dim_patients/`, `dim_providers/`, `fct_encounters/`, `fct_claims/`.
 
 2. **Cataloging with AWS Glue**
    - Created Glue Database: `yesh-healthcare1`.
-   - Ran a **Glue Crawler** on `s3://<bucket>/processed/` to register tables and schemas in the Data Catalog.
+   - Ran a **Glue Crawler** on `s3://<yesh-healthcare1>/processed/` to register tables and schemas in the Data Catalog.
 
 3. **Modeling in Athena**
    - Pointed Athena to the Glue DB.
@@ -125,6 +125,3 @@ This repo is the result: a thin but realistic slice that touches storage, catalo
   - **Glue Workflow** for scheduled refresh + CI/CD for SQL.
 
 ---
-
-## Repo layout
-
