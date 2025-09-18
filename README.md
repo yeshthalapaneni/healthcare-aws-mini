@@ -7,8 +7,6 @@
 - **Billed vs Paid** by payer (reimbursement view)
 - **Top diagnoses** by billed amount
 
-![Dashboard](/Users/yeshwantht/Desktop/Screenshot\ 2025-09-18\ at\ 12.19.30 PM.png )
-[view the full dashboard](Healthcare-mini_analysis.pdf)
 
 ---
 
@@ -26,7 +24,7 @@ A small, explainable, end-to-end analytics slice you can build and share in a da
 ---
 
 ## Reproduce (high-level)
-1. **S3:** Upload parquet files to `s3://<your-bucket>/processed/...`
+1. **S3:** Upload parquet files to `s3://<yesh-healthcare1>/processed/...`
 2. **Glue:** Crawler → create database `yesh-healthcare1`, tables:
    - `dim_patients`, `dim_providers`, `fct_claims`, `fct_encounters`
 3. **Athena:** Workgroup `primary`
